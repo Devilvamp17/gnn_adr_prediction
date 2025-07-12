@@ -22,16 +22,9 @@ And the following edge types:
 ## 📁 Project Structure
 
 ```
-├── src/
-├── data/
-│   ├── meddra_all_se.tsv
-│   ├── drug_names.tsv
-│   ├── CTD_chemicals_diseases.csv.gz
-│   ├── CTD_chem_gene_ixns.csv.gz
-│   ├── CTD_chemicals.csv.gz
-│   └── CTD_genes.csv.gz
-├── notebook/
-│   └── link_prediction_hetero_gnn.ipynb
+├── main.ipynb
+├── model.ipynb
+├── requirments.txt
 └── README.md
 ```
 
@@ -99,7 +92,10 @@ Early stopping is used based on validation AUC.
 Sample output:
 ```
 Epoch: 001, Train Loss: 0.7351, Val AUC: 0.9780, Val AUPRC: 0.9562
+Epoch: 002, Train Loss: 0.3883, Val Loss: 0.1951, Val AUC: 0.9735, Val AUPRC: 0.9339
 ...
+Epoch: 203, Train Loss: 0.0587, Val Loss: 0.0786, Val AUC: 0.9909, Val AUPRC: 0.9857
+Epoch: 204, Train Loss: 0.0561, Val Loss: 0.0803, Val AUC: 0.9911, Val AUPRC: 0.9862
 Early stopping triggered after 204 epochs due to no improvement.
 Test AUC: 0.9911, Test AUPRC: 0.9857
 ```
@@ -114,10 +110,11 @@ High validation and test AUC/AUPRC indicate the heterogeneous GNN effectively ca
 - Pretrained embeddings for genes and diseases
 - Extend to other relation prediction tasks (e.g., drug-gene, drug-disease)
 - Use larger subsets of CTD/SIDER
+- use drig bank's dataset 
 
 ## 👨‍🔬 Author
 
-Project by [Your Name Here]
+Project by [Arnav Goyal]
 
 ---
 
